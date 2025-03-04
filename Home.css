@@ -22,6 +22,7 @@ nav {
 }
 
 .nav-links {
+    transition: transform 0.3s ease; /* Added transition for smooth sliding */
     display: flex;
     list-style: none; /* Ensure no bullet points */
 }
@@ -40,30 +41,30 @@ nav {
 }
 .nav-links li a:hover{
     color: bisque;
-
 }
 
-.nav-mobile{
+.nav-mobile {
+    position: relative; /* Ensure it stays in view when the menu is open */
     display: none;
 }
 .nav-mobile div{
     width: 25px;
-height: 2.5px;
-background-color: #fff;
-margin: 5px;
+    height: 2.5px;
+    background-color: #fff;
+    margin: 5px;
 }
 
-/*Responsive Media Quaries*/
+/*Responsive Media Queries*/
 @media only screen and (max-width: 992px) {
     body{
         overflow-x: hidden;
     }
     .nav-links{
-        position: absolute;
+        position: fixed; /* Changed to fixed to cover the whole page */
         right: 0px;
-        top: 7.5vh;
-        height: 92.5vh;
-        background-color: #000000;
+        top: 0; /* Set to top of the page */
+        height: 100vh; /* Set height to 100% of the viewport */
+        background-color: rgba(0, 0, 0, 0.9); /* Optional: Add a background color */
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -81,6 +82,7 @@ margin: 5px;
     }
 }
 
+
 @media only screen and (min-width: 993px) and (max-width: 1199px) {
     .nav-links li a {
         margin-left: 20px;
@@ -89,5 +91,5 @@ margin: 5px;
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
     .nav-links li a {
         margin-left: 35px;
-}
+    }
 }
