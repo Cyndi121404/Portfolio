@@ -1,3 +1,10 @@
+/* Colors I want::after
+#C2C094 ~ Sage
+#297373 ~ Myrtle Green
+#A7ACD9 ~ periwinkle
+#AA4465 ~ Rasberry Rose
+#6D454C ~ Rose ebony
+*/
 /* Everything */
 * {
     margin: 0;
@@ -12,7 +19,7 @@ nav {
     align-items: center;
     font-family: cursive;
     min-height: 7.5vh;
-    background-color: #333;
+    background-color: #A7ACD9;
     padding: 0 10%;
 }
 
@@ -32,7 +39,7 @@ nav {
 }
 
 .nav-links li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     letter-spacing: 2;
     font-size: 15.5px;
@@ -40,19 +47,24 @@ nav {
     transition: color 0.5s ease;
 }
 .nav-links li a:hover{
-    color: bisque;
+    color: #297373;
 }
 
 .nav-mobile {
     position: relative; /* Ensure it stays in view when the menu is open */
     display: none;
 }
-.nav-mobile div{
+.nav-mobile div {
     width: 25px;
     height: 2.5px;
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 5px;
 }
+
+.nav-mobile:hover div {
+    background-color: #297373; /* Change color of all lines on hover */
+}
+
 
 /*Responsive Media Queries*/
 @media only screen and (max-width: 992px) {
@@ -64,7 +76,7 @@ nav {
         right: 0px;
         top: 0; /* Set to top of the page */
         height: 100vh; /* Set height to 100% of the viewport */
-        background-color: rgba(0, 0, 0, 0.9); /* Optional: Add a background color */
+        background-color: #A7ACD9; /* Optional: Add a background color */
         width: 100%;
         display: flex;
         flex-direction: column;
